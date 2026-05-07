@@ -1,0 +1,43 @@
+body{
+    background:#f0f2f5;
+    font-family:Arial;
+}
+
+.container{
+    width:600px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+h1{
+    text-align:center;
+}
+
+.question-box{
+    margin-bottom:25px;
+    padding:15px;
+    background:#f9f9f9;
+    border-radius:8px;
+}
+
+label{
+    font-size:18px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#007BFF;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0056b3;
+}
