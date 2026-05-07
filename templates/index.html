@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Quiz App</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Online Quiz Application</h1>
+
+    <form method="POST">
+
+        {% for q in questions %}
+
+            {% set outer_loop = loop %}
+
+            <div class="question-box">
+
+                <h3>
+                    {{ loop.index }}.
+                    {{ q.question }}
+                </h3>
+
+                {% for option in q.options %}
+
+                    <label>
+
+                        <input type="radio"
+                        name="q{{ outer_loop.index0 }}"
+                        value="{{ option }}"
+                        required>
+
+                        {{ option }}
+
+                    </label>
+
+                    <br>
+
+                {% endfor %}
+
+            </div>
+
+        {% endfor %}
+
+        <button type="submit">
+            Submit Quiz
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
